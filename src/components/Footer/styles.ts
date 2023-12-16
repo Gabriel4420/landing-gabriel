@@ -153,7 +153,7 @@ export const Label = styled("label")`
 export const LanguageSwitch = styled("div")<any>`
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-
+  margin-left: 10px;
   &:hover,
   &:active,
   &:focus {

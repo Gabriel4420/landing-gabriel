@@ -121,6 +121,15 @@ const Footer = ({ t }: any) => {
                     height="30px"
                   />
                 </LanguageSwitch>
+
+                <LanguageSwitch onClick={() => handleChange("ptbr")}>
+                  <SvgIcon
+                    src="brazil.svg"
+                    aria-label="homepage"
+                    width="30px"
+                    height="30px"
+                  />
+                </LanguageSwitch>
               </LanguageSwitchContainer>
             </Col>
           </Row>

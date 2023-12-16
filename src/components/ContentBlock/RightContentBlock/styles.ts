@@ -2,14 +2,27 @@ import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
+  padding: 10rem 0 4rem;
 
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 4rem 0 3rem;
+    padding: 7rem 0 1rem;
+    .mobileView {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0.5rem 0.5rem 0.5rem;
+    }
+
+    .iconMobile {
+      padding-bottom: 3.5rem;
+    }
+
+    .ant-col-sm-11 {
+      max-width: 100%;
+    }
   }
 `;
 
@@ -19,10 +32,11 @@ export const Content = styled("p")`
 
 export const ContentWrapper = styled("div")`
   position: relative;
-  max-width: 540px;
-
+  max-width: 100%;
+  width: 800px;
   @media only screen and (max-width: 575px) {
     padding-bottom: 4rem;
+    width: 100%;
   }
 `;
 
@@ -33,9 +47,5 @@ export const ButtonWrapper = styled("div")`
 
   @media screen and (min-width: 1024px) {
     max-width: 80%;
-  }
-
-  button:last-child {
-    margin-left: 20px;
   }
 `;

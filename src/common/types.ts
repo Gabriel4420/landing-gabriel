@@ -9,6 +9,8 @@ export interface ButtonProps {
   name?: string;
   children: React.ReactNode;
   onClick?: () => void;
+  isLastChild?: boolean;
+  fontSize?: string;
 }
 
 export interface SvgIconProps {

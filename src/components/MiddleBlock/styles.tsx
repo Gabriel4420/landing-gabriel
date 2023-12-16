@@ -12,12 +12,20 @@ export const MiddleBlockSection = styled("section")`
   }
 `;
 
-export const Content = styled("p")`
-  padding: 0.75rem 0 0.75rem;
+export const Content = styled("div")`
+  .formatContent {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.3rem;
+  }
+  padding: 0.35rem 0 3.75rem;
 `;
 
 export const ContentWrapper = styled("div")`
-  max-width: 570px;
+  .tituloMiddle {
+    font-size: 2.8rem;
+    text-align: center;
+  }
 
   @media only screen and (max-width: 768px) {
     max-width: 100%;

@@ -2,13 +2,29 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 
-export const HeaderSection = styled("header")`
+interface Props {
+  hasShadow?: boolean;
+}
+
+export const HeaderSection = styled.header<Props>`
   padding: 1rem 0.5rem;
 
   .ant-row-space-between {
     align-items: center;
     text-align: center;
   }
+  position: fixed;
+  background-color: #ffffff;
+
+  width: 100%;
+  z-index: 100;
+  transition: box-shadow 0.3s ease;
+
+  ${(props) =>
+    props.hasShadow &&
+    `
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  `}
 `;
 
 export const LogoContainer = styled(Link)`

@@ -1,10 +1,10 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
-import ContactContent from "../../content/ContactContent.json";
+import MiddleBlockContent from "../../content/ptbr/MiddleBlockContent.json";
+import AboutContent from "../../content/ptbr/AboutContent.json";
+import MissionContent from "../../content/ptbr/MissionContent.json";
+import ProductContent from "../../content/ptbr/ProductContent.json";
+import ContactContent from "../../content/ptbr/ContactContent.json";
+import { withTranslation } from "react-i18next";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -12,22 +12,23 @@ const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
-const Home = () => {
+const Home = ({ t }: any) => {
   return (
     <Container>
       <ScrollToTop />
       <ContentBlock
         type="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
+        title={t("IntroContentTitle")}
+        content={t("IntroContentDescription")}
+        button={t("title")}
         icon="developer.svg"
         id="intro"
       />
       <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
+        title={t("MiddleContentBlockTitle")}
+        content={t("MiddleContentBlockDescription")}
+        button={t("MiddleContentBlockButton")}
+        btnFTS="1.3rem;"
       />
       <ContentBlock
         type="left"
@@ -60,4 +61,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withTranslation()(Home);
